@@ -5,6 +5,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><router-link :to="{name: 'Login'}">Login</router-link></li>
         <li><router-link :to="{name: 'People'}">People</router-link></li>
+        <li><router-link :to="{name: 'Cities'}">Cities</router-link></li>
         <li><router-link :to="{name: 'Home'}">Home</router-link></li>
       </ul>
     </div>
@@ -26,17 +27,7 @@
 export default{
   name: 'App',
   mounted() {
-    const headers = { 
-    'tenant': 'eluma'
-    };
-    this.axios.post('http://localhost:8081/api/auth/login', {
-        email: 'support-admin@mail.com',
-        password: 'password'
-      },  { headers })
-    .then(() => {
 
-    }
-    )
   },
 }
 
