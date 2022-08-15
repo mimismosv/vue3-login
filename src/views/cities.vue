@@ -11,14 +11,14 @@
         cities: [],
         }
     },
-    async nmounted() 
+    async mounted() 
     {
         const headers = {
-        tenant_name: "eLuma",
+        tenant: "eLuma",
         Authorization: localStorage.getItem('token'),
         };
         await this.axios
-        .get("/api/cities")
+        .get("/api/cities", { headers })
         .then((Response) => {
             this.cities = Response.data;
             console.log(Response.data);
