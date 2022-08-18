@@ -1,5 +1,10 @@
 <template>
     <div>Cities</div>
+    <div class="row">
+        <div class="col m12">
+          
+        </div>
+    </div>
 </template>
 
 <script>
@@ -21,10 +26,10 @@
         .get("/api/cities", { headers })
         .then((Response) => {
             this.cities = Response.data;
-            console.log(Response.data);
+            console.log();
         })
         .catch((error) => {
-          var data = error.response.data;
+          var data = error.Response.data;
           M.toast({ html: data.message });
         });
     }    
