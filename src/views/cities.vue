@@ -26,7 +26,7 @@
         .get("/api/cities", { headers })
         .then((Response) => {
             this.cities = Response.data;
-            console.log();
+            console.table(Response.data);
         })
         .catch((error) => {
           var data = error.Response.data;
