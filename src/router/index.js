@@ -1,29 +1,23 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import People from '@/views/people.vue'
-import Login from '@/views/login.vue'
-import Home from '@/views/home.vue'
-import Cities from '@/views/cities.vue'
+import Promotions from '@/views/Promotions.vue'
+import Admin from '@/views/Admin.vue'
+import Products from '@/views/products.vue'
 
 const routes = [
     {
-        path: '/Login',
-        name: 'Login',
-        component: Login
+        path: '/Admin',
+        name: 'Admin',
+        component: Admin
     },
     {
-        path: '/People',
-        name: 'People',
-        component: People
+        path: '/Promotions',
+        name: 'Promotions',
+        component: Promotions
     },
     {
         path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/Cities',
-        name: 'Cities',
-        component: Cities
+        name: 'Products',
+        component: Products
     },
 ];
 

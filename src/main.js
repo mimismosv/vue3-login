@@ -5,6 +5,6 @@ import 'material-design-icons/iconfont/material-icons.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
-axios.defaults.baseURL = 'http://login-back.test/'
+axios.defaults.baseURL = 'http://localhost/products/public/api/'
 
 createApp(App).use(router).use(VueAxios, axios).mount('#app')
