@@ -92,7 +92,7 @@
 
 
         var elem = document.querySelector('.carousel')
-        var t = new M.Carousel(elem, null)
+        var t = new M.Carousel(elem, {numVisible:4})
     }, 
     };
 </script>
