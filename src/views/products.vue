@@ -1,37 +1,25 @@
 <template>
-
-    <div class="container">
         <div class="carousel carousel-slider">
             <div class="carousel-item" v-for='productOffer in productsOffer' v-bind:key='productsOffer'>
-
                 <div class="row">
-                    <div class="col s12 m7">
-                    <div class="card small">
+                    <div class="col s1 m12">
+                    <div class="card mediun">
                         <div class="card-image">
-                            <img :src="productOffer.picture">
-                        <span class="card-title">
-                                <span style="text-decoration:line-through;">                               
-                                    Old Price:${{productOffer.price}}
-                                </span>
-                        </span>
+                        <img :src="productOffer.picture" width="100" style="height:340px;">
+                        <span class="card-title">{{productOffer.name}} --- Old Price:${{productOffer.price}}</span>
                         </div>
-                        <span class="card-title black-text text-darken-7">Promotion Price: ${{productOffer.promotion_percentage}}</span>
-                        <br>
-                            <a href="#">{{productOffer.name}} [+]More..</a> 
+                        <div class="card-action">
+                            <span class="card-title black-text text-darken-7">New Price: ${{productOffer.promotion_percentage}}  </span><a href="#">  [+]MORE..</a>
+                        </div>
                     </div>
                     </div>
                 </div>
-
             </div>        
         </div>
-    </div>
 
     <div><h3>Productos</h3></div>
 
     <div class="container">
-            <div class="row 1">
-                Categorias
-            </div>
             <div class="row 1">
                 <div class="col l4" v-for='product in products' v-bind:key='products'>
                     <div class="card Large">
@@ -92,7 +80,11 @@
 
 
         var elem = document.querySelector('.carousel')
-        var t = new M.Carousel(elem, {numVisible:4})
+        var t = new M.Carousel(elem, {
+            numVisible:4,
+            fullWidth: true,
+            indicators: true
+        })
     }, 
     };
 </script>
